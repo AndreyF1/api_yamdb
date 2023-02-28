@@ -1,10 +1,9 @@
 # YaMDb service
-## Key points
-* Use views.
-* Use JWT tokens for authentication.
-* Unauthenticated users should have read-only access to the API. The exception is the /follow/ endpoint: access to it should be granted only to authenticated users.
-* Authenticated users are allowed to modify and delete their content; otherwise, read-only access is granted.
-* Adding new users via the API is not required.
-* Own permission classes.
-* Describing views, for some models to inherit from their own base viewset.
-* Organize work with JWT tokens using the Djoser library.
+## YaMDb API Resources
+* Auth resource: authentication.
+* Resource users: users.
+* Resource titles: works for which reviews are written (a certain movie, book or song).
+* Resource categories: categories (types) of works ("Movies", "Books", "Music"). One work can be linked to only one category.
+* Genres resource: genres of works. One work can be linked to several genres.
+* Reviews resource: reviews of works. The review is tied to a specific work.
+* Comments resource: comments on reviews. The comment is linked to a specific review.
